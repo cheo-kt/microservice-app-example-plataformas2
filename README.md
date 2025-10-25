@@ -77,7 +77,16 @@ microservice-app-example-plataformas2/
     ├── todos-api-deployment.yaml
     ├── frontend-deployment.yaml
     ├── log-message-processor-deployment.yaml
-    └── all-in-one.yaml
+    ├── users-api-deployment.yaml                ✅ Con resources, rolling update, health checks
+    ├── todos-api-deployment.yaml                ✅ Con resources, rolling update, health checks
+    ├── frontend-deployment.yaml                 ✅ Con resources, rolling update, health checks
+    ├── all-in-one.yaml
+    ├── todos-api-hpa.yaml                       (🆕 HPA para todos-api)
+    ├── users-api-hpa.yaml                       (🆕 HPA para users-api)
+    ├── auth-api-hpa.yaml 
+    ├── network-policy-deny-all.yaml          
+    ├── network-policy-allow-frontend.yaml    
+    └── network-policy-allow-backends.yaml    
 ```
 
 ---

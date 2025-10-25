@@ -4,7 +4,12 @@ metadata:
   name: todos-api
   namespace: microservice-app
 spec:
-  replicas: 1
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: todos-api
@@ -12,25 +17,30 @@ spec:
     metadata:
       labels:
         app: todos-api
+        version: v1
     spec:
       containers:
         - name: todos-api
           image: chechoiot/todos-api:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
           env:
             - name: REDIS_HOST
               value: "redis.microservice-app.svc.cluster.local"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: todos-api
-  namespace: microservice-app
-spec:
-  selector:
-    app: todos-api
-  ports:
-    - port: 8080
-      targetPort: 8080
-
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          readinessProbe:
+            tcpSocket:
+              port: 8082
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: 8082
+            initialDelaySeconds: 30
+            periodSeconds: 10

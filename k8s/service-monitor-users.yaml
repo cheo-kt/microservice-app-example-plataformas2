@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: users-api-servicemonitor
+  namespace: monitoring    # los ServiceMonitors suelen ir al namespace del stack (monitoring)
+  labels:
+    release: prom-stack    # asegúrate que coincide con selector del helm chart si configuraste uno
+spec:
+  selector:
+    matchLabels:
+      app: users-api       # label del Service en microservice-app
+  namespaceSelector:
+    matchNames:
+      - microservice-app
+  endpoints:
+    - port: http           # nombre del port en el Service; o usa targetPort: 8080
+      path: /metrics       # tu app debe exponer métricas Prometheus en /metrics
+      interval: 15s
+

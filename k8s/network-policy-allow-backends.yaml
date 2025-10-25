@@ -1,0 +1,47 @@
+# Permitir que todos-api hable con users-api
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-todos-to-users
+  namespace: microservice-app
+spec:
+  podSelector:
+    matchLabels:
+      app: users-api
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: todos-api
+      ports:
+        - protocol: TCP
+          port: 8080
+---
+# Permitir acceso a Redis desde los servicios que lo necesiten
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-backends-to-redis
+  namespace: microservice-app
+spec:
+  podSelector:
+    matchLabels:
+      app: redis
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: auth-api
+        - podSelector:
+            matchLabels:
+              app: users-api
+        - podSelector:
+            matchLabels:
+              app: todos-api
+      ports:
+        - protocol: TCP
+          port: 6379

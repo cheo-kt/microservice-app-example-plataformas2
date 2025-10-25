@@ -3,10 +3,13 @@ kind: Deployment
 metadata:
   name: frontend
   namespace: microservice-app
-  labels:
-    app: frontend
 spec:
-  replicas: 1
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: frontend
@@ -14,6 +17,7 @@ spec:
     metadata:
       labels:
         app: frontend
+        version: v1
     spec:
       containers:
         - name: frontend
@@ -21,9 +25,24 @@ spec:
           ports:
             - containerPort: 80
           resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
             limits:
               memory: "128Mi"
               cpu: "250m"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 10
           # Puedes montar una página estática personalizada si quieres
           # pero no es necesario para este laboratorio.
           # volumeMounts:
@@ -50,4 +69,3 @@ spec:
       targetPort: 80
       protocol: TCP
       name: http
-
