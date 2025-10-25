@@ -976,32 +976,36 @@ auth-api-hpa     Deployment/auth-api    0%/50%    1         5         1
 
 ## **10. Fotos**
 
-### Pods corriendo correctamente
-<img width="1600" height="338" alt="image" src="https://github.com/user-attachments/assets/61209396-f593-4c5d-85b6-ea1df8db93f2" />
+<img width="1600" height="572" alt="image" src="https://github.com/user-attachments/assets/d38effde-84fd-4727-b01d-c5c36130f194" />
+<img width="1600" height="248" alt="image" src="https://github.com/user-attachments/assets/a896a592-c888-4ff6-8ea0-e2ad735251c6" />
+<img width="953" height="1006" alt="image" src="https://github.com/user-attachments/assets/550dd952-79a2-4163-ae00-cde8a152b780" />
+<img width="1600" height="848" alt="image" src="https://github.com/user-attachments/assets/487e7220-dc2a-412b-bde0-602f508400e1" />
+<img width="1600" height="852" alt="image" src="https://github.com/user-attachments/assets/b5e497e6-2544-4cc1-aec1-ac6bdf81b5f7" />
+<img width="1600" height="833" alt="image" src="https://github.com/user-attachments/assets/1b7b07c9-75b3-4412-8057-2b8187d6595a" />
+<img width="1600" height="854" alt="image" src="https://github.com/user-attachments/assets/2a958557-b76e-4779-924e-367107448784" />
+<img width="1600" height="862" alt="image" src="https://github.com/user-attachments/assets/f43cde96-912e-4f9a-af51-fbe53ff33fca" />
+<img width="1600" height="832" alt="image" src="https://github.com/user-attachments/assets/1596faeb-6fa4-44a1-9ed6-d43a639a688a" />
+<img width="1600" height="406" alt="image" src="https://github.com/user-attachments/assets/4628bd13-1e32-45b1-b18e-a7e11daf2884" />
+<img width="1600" height="817" alt="image" src="https://github.com/user-attachments/assets/45b7dc56-0f44-4e34-8ef6-faf7019733f5" />
+<img width="1600" height="836" alt="image" src="https://github.com/user-attachments/assets/16e3abe3-968b-48bc-9616-03cbd321595d" />
+<img width="1600" height="298" alt="image" src="https://github.com/user-attachments/assets/9bdf71c1-6668-42b1-86ef-835d0a9dc025" />
+<img width="1600" height="272" alt="image" src="https://github.com/user-attachments/assets/4238b2ee-93ad-4b5c-b890-7e970a9d5ae7" />
+<img width="1600" height="619" alt="image" src="https://github.com/user-attachments/assets/2c23c9b5-3029-48a4-ae50-94ee55fbe25c" />
+<img width="1600" height="626" alt="image" src="https://github.com/user-attachments/assets/c0ad4a22-d8fa-4ec6-8583-c5f19ce5d4c5" />
+<img width="1600" height="695" alt="image" src="https://github.com/user-attachments/assets/fef4831f-0d7b-4bcb-86e3-7fb988d2ff48" />
+<img width="1600" height="760" alt="image" src="https://github.com/user-attachments/assets/06b27c2e-81ed-4215-ab67-9384504f1ea0" />
+<img width="1600" height="659" alt="image" src="https://github.com/user-attachments/assets/e87f838e-6f60-420a-a937-8e9b645d8d5b" />
+<img width="1600" height="696" alt="image" src="https://github.com/user-attachments/assets/40dd2d94-7d47-489b-bf11-44685c26b4d5" />
+<img width="1600" height="806" alt="image" src="https://github.com/user-attachments/assets/bd14efe9-0632-4e47-8ab1-59856c82ecc8" />
+<img width="1600" height="135" alt="image" src="https://github.com/user-attachments/assets/e34558cc-4028-4c9c-b8a1-1f5eb60997dc" />
+<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/83edd0f3-c005-4082-95d4-dd4650c3d01b" />
+<img width="1600" height="618" alt="image" src="https://github.com/user-attachments/assets/40b9433d-5d33-48e3-bd12-132a5e794446" />
+<img width="1600" height="158" alt="image" src="https://github.com/user-attachments/assets/c003a179-7dc7-4860-96df-658503bb7498" />
+<img width="1600" height="844" alt="image" src="https://github.com/user-attachments/assets/c31f89e1-7af5-4b69-80bb-5c428e6117af" />
+<img width="1599" height="302" alt="image" src="https://github.com/user-attachments/assets/ddf905c1-e910-4589-95fc-9cff80bfffca" />
 
-### Servicios desplegados
-<img width="1600" height="557" alt="image" src="https://github.com/user-attachments/assets/7bc9c4ab-4b93-4e98-ab7a-7fbd3618f772" />
 
-### Deployments activos
-<img width="1600" height="142" alt="image" src="https://github.com/user-attachments/assets/7b285f33-0082-438a-a495-921430b72cb5" />
 
-### HPAs configurados
-<img width="1597" height="136" alt="image" src="https://github.com/user-attachments/assets/ffe4f16b-71ab-420f-a507-cec6e62ca4d5" />
-
-### Frontend funcionando
-<img width="1530" height="445" alt="image" src="https://github.com/user-attachments/assets/5fbaf0f7-61d9-4798-a72e-ca5b0a70ad5f" />
-
-### Grafana Dashboard - Kubernetes Overview
-<img width="1600" height="463" alt="image" src="https://github.com/user-attachments/assets/5cd7ffa4-a3c2-46a9-ae6d-4dae1abd50c0" />
-
-### Grafana Dashboard - Pods Metrics
-<img width="1600" height="677" alt="image" src="https://github.com/user-attachments/assets/495bb42c-b039-4511-9d52-6e2ec5c08c53" />
-
-### Prometheus Metrics
-<img width="1600" height="857" alt="image" src="https://github.com/user-attachments/assets/516ff33f-3a98-4f52-994c-f8c5b15043c8" />
-
-### Rolling Update en acción
-<img width="1600" height="230" alt="image" src="https://github.com/user-attachments/assets/3b908aa4-d870-48c0-b687-5106c4fc1aae" />
 
 
 
